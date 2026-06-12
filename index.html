@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>سكني للمقاولات | منجزات م. عبدالرحمن</title>
+  <!-- استيراد خط IBM Plex Sans Arabic من Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /* تطبيق خط IBM Plex Sans Arabic على كل النصوص */
+      font-family: 'IBM Plex Sans Arabic', 'Segoe UI', 'Tajawal', 'Cairo', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at 10% 20%, #0a1f1a, #05100c);
+      min-height: 100vh;
+      padding: 1.2rem;
+      color: #eef5f0;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* هيدر زجاجي */
+    .glass-header {
+      background: rgba(15, 35, 30, 0.55);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.8rem;
+      border: 1px solid rgba(80, 200, 120, 0.3);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .brand h1 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #C0FFD0, #6feb9e);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.2px;
+    }
+
+    .brand p {
+      font-size: 0.8rem;
+      color: #b9e6cd;
+      margin-top: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+    }
+
+    .team-badge {
+      background: rgba(30, 70, 55, 0.7);
+      border-radius: 2rem;
+      padding: 0.3rem 1rem;
+      backdrop-filter: blur(4px);
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-right: 2px solid #2ecc71;
+    }
+
+    /* ========== بطاقات الإحصائيات الثلاث ========== */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-card {
+      background: rgba(15, 38, 32, 0.75);
+      backdrop-filter: blur(8px);
+      border-radius: 0.9rem;
+      padding: 1rem 1.2rem;
+      border: 1px solid rgba(70, 210, 130, 0.3);
+      transition: transform 0.2s ease, background 0.2s;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-3px);
+      background: rgba(30, 70, 55, 0.85);
+      border-color: rgba(80, 220, 130, 0.7);
+    }
+
+    .stat-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #c0f0d4;
+      letter-spacing: 0.2px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .stat-value {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #6ef0a3;
+      line-height: 1.1;
+    }
+
+    .stat-icon {
+      font-size: 2.4rem;
+      opacity: 0.85;
+    }
+
+    /* ========== شبكة البطاقات ========== */
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .achievement-card {
+      background: rgba(8, 28, 22, 0.85); /* خلفية أكثر داكنية */
+      backdrop-filter: blur(8px);
+      border-radius: 0.9rem;
+      padding: 1rem;
+      transition: all 0.25s ease;
+      border: 1px solid rgba(70, 200, 120, 0.3);
+      box-shadow: 0 6px 12px -4px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* لمعة خفيفة على خلفية الكرت - تأثير وهج ناعم */
+    .achievement-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      background: radial-gradient(circle at 30% 10%, rgba(80, 220, 130, 0.08), transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* لمعان إضافي عند التمرير */
+    .achievement-card:hover::before {
+      background: radial-gradient(circle at 40% 20%, rgba(100, 240, 150, 0.12), transparent 80%);
+    }
+
+    .achievement-card:hover {
+      transform: translateY(-4px);
+      background: rgba(12, 38, 30, 0.92);
+      border-color: #3edb7a;
+      box-shadow: 0 14px 20px -8px rgba(0, 0, 0, 0.5);
+    }
+
+    /* رأس البطاقة: يحتوي على الايموجي والعنوان بجانب بعض */
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    .emoji-badge {
+      font-size: 2.4rem;
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 1rem;
+      padding: 0.2rem 0.5rem;
+      line-height: 1;
+    }
+
+    /* عنوان الإنجاز باللون الأصفر المشمشي */
+    .card-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #FFD966;
+      line-height: 1.3;
+      flex: 1;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+
+    /* تكبير خط الوصف قليلاً */
+    .card-desc {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: #d4f0e2;
+      margin: 8px 0 10px;
+      line-height: 1.5;
+      position: relative;
+      z-index: 1;
+    }
+
+    .month-only {
+      margin-top: 8px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #b0e0c2;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(10, 40, 30, 0.6);
+      width: fit-content;
+      padding: 4px 12px;
+      border-radius: 1.2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(10, 30, 24, 0.6);
+      border-radius: 1rem;
+      font-size: 1rem;
+      font-weight: 500;
+      grid-column: 1 / -1;
+    }
+
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.7rem;
+      font-weight: 500;
+      opacity: 0.6;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 0.8rem;
+      }
+      .glass-header {
+        padding: 0.8rem 1rem;
+      }
+      .brand h1 {
+        font-size: 1.3rem;
+      }
+      .stat-card {
+        padding: 0.8rem 1rem;
+      }
+      .stat-value {
+        font-size: 2rem;
+      }
+      .stat-icon {
+        font-size: 2rem;
+      }
+      .stat-label {
+        font-size: 0.75rem;
+      }
+      .achievement-card {
+        padding: 0.85rem;
+      }
+      .card-title {
+        font-size: 1.15rem;
+      }
+      .emoji-badge {
+        font-size: 2rem;
+      }
+      .card-header {
+        gap: 0.4rem;
+      }
+      .card-desc {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- Header زجاجي بهوية الشركة والفريق -->
+  <div class="glass-header">
+    <div class="header-content">
+      <div class="brand">
+        <h1>📍 سكني للمقاولات</h1>
+        <p>🏆 لوحة المنجزات لشهر مايو</p>
+      </div>
+      <div class="team-badge">
+        ⚡ م. عبدالرحمن
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 بطاقات إحصائيات (اجمالي الانجازات، عدد المواضيع، الانجازات المميزة) -->
+  <div class="stats-row" id="statsContainer">
+    <div class="stat-card">
+      <div class="stat-info">
+        <div class="stat-label">📊 إجمالي الإنجازات</div>
+        <div class="stat-value" id="totalCount">0</div>
+      </div>
+      <div class="stat-icon">🏆</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-info">
+        <div class="stat-label">📚 عدد المواضيع</div>
+        <div class="stat-value" id="topicsCount">0</div>
+      </div>
+      <div class="stat-icon">🎯</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-info">
+        <div class="stat-label">✨ الإنجازات المميزة</div>
+        <div class="stat-value" id="featuredCount">0</div>
+      </div>
+      <div class="stat-icon">⭐</div>
+    </div>
+  </div>
+
+  <!-- شبكة البطاقات -->
+  <div id="achievementsGrid" class="achievements-grid"></div>
+  <footer>💎 شركة سكني للمقاولات</footer>
+</div>
+
+<script>
+  // --------------------------------------------------------------
+  // البيانات مخزنة داخلياً بصيغة JSON (مصفوفة إنجازات ثابتة)
+  // --------------------------------------------------------------
+  let achievementsData = [
+    {
+      id: "ach1",
+      title: "تسليم برج الأماني",
+      description: "تم تسليم البرج السكني قبل الموعد بـ 3 أسابيع بجودة استثنائية وحصول على شهادة الجودة الذهبية.",
+      month: "فبراير 2025",
+      emoji: "🏢✨",
+      category: "إنشائي"
+    },
+    {
+      id: "ach2",
+      title: "تطبيق تقنية BIM",
+      description: "إدخال نمذجة معلومات المباني في مشروع الخيران، رفع الكفاءة بنسبة 40%.",
+      month: "يناير 2025",
+      emoji: "📐🖥️",
+      category: "مبتكر"
+    },
+    {
+      id: "ach3",
+      title: "صفر إصابات عمل",
+      description: "تحقيق 6 أشهر متتالية بدون أي حوادث عمل في موقع توسعة المستشفى.",
+      month: "مارس 2025",
+      emoji: "🛡️✅",
+      category: "سلامة"
+    },
+    {
+      id: "ach4",
+      title: "جائزة أفضل مهندس موقع",
+      description: "المهندس عبدالرحمن يحصل على جائزة التميز الهندسي من هيئة المقاولين.",
+      month: "ديسمبر 2024",
+      emoji: "🏅👷",
+      category: "هندسي"
+    },
+    {
+      id: "ach5",
+      title: "مشروع البنية التحتية الذكية",
+      description: "تركيب ألياف بصرية وتقنيات إنارة موفرة للطاقة في حي الورود.",
+      month: "نوفمبر 2024",
+      emoji: "⚡🌐",
+      category: "مبتكر"
+    },
+    {
+      id: "ach6",
+      title: "شهادة الأيزو 45001",
+      description: "حصول إدارة السلامة على شهادة الأيزو لأنظمة الصحة والسلامة المهنية.",
+      month: "أكتوبر 2024",
+      emoji: "📜🏅",
+      category: "سلامة"
+    }
+  ];
+
+  // تحديث الإحصائيات
+  function updateStatistics() {
+    const total = achievementsData.length;
+    document.getElementById('totalCount').innerText = total;
+
+    const uniqueCategories = new Set(achievementsData.map(ach => ach.category));
+    const topicsCount = uniqueCategories.size;
+    document.getElementById('topicsCount').innerText = topicsCount;
+
+    let featuredCounter = 0;
+    for (let ach of achievementsData) {
+      let isFeatured = false;
+      if (ach.title.includes("جائزة") || ach.title.includes("ذهبية") || ach.title.includes("تميز")) isFeatured = true;
+      else if (ach.description.includes("جائزة") || ach.description.includes("تميز") || ach.description.includes("قيادة") || ach.description.includes("أفضل")) isFeatured = true;
+      else if (ach.category === "مبتكر") isFeatured = true;
+      else if (ach.title.includes("شهادة") || ach.title.includes("أيزو")) isFeatured = true;
+      if (isFeatured) featuredCounter++;
+    }
+    document.getElementById('featuredCount').innerText = featuredCounter;
+  }
+
+  // عرض الإنجازات
+  function renderAchievements() {
+    const grid = document.getElementById('achievementsGrid');
+    if (!grid) return;
+
+    if (achievementsData.length === 0) {
+      grid.innerHTML = `<div class="empty-state">✨ لا توجد إنجازات مسجلة حالياً لعرضها ✨</div>`;
+      updateStatistics();
+      return;
+    }
+
+    let cardsHtml = '';
+    achievementsData.forEach(ach => {
+      cardsHtml += `
+        <div class="achievement-card">
+          <div class="card-header">
+            <div class="emoji-badge">${escapeHtml(ach.emoji || '🏆')}</div>
+            <div class="card-title">${escapeHtml(ach.title)}</div>
+          </div>
+          <div class="card-desc">${escapeHtml(ach.description)}</div>
+          <div class="month-only">
+            📅 ${escapeHtml(ach.month)}
+          </div>
+        </div>
+      `;
+    });
+    grid.innerHTML = cardsHtml;
+    updateStatistics();
+  }
+
+  // دالة لتنظيف النص
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/[&<>]/g, function(m) {
+      if (m === '&') return '&amp;';
+      if (m === '<') return '&lt;';
+      if (m === '>') return '&gt;';
+      return m;
+    }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function(c) {
+      return c;
+    });
+  }
+
+  // بدء التشغيل
+  function initializeApp() {
+    renderAchievements();
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initializeApp();
+  });
+</script>
+</body>
+</html>
