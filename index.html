@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>سكني للمقاولات | منجزات مايو</title>
+  <title>سكني للمقاولات | منجزات مايو - أغسطس 2026</title>
   <!-- استيراد خط IBM Plex Sans Arabic من Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -15,12 +15,11 @@
     }
 
     body {
-      /* خلفية أغمق - تم تعديل الألوان لتصبح أكثر قتامة */
       background: radial-gradient(circle at 10% 20%, #0a1a14, #030a07);
       min-height: 100vh;
       padding: 1rem;
       color: #eef5f0;
-      font-size: 18px; /* تم تكبير الخط الأساسي */
+      font-size: 18px;
     }
 
     .container {
@@ -28,7 +27,6 @@
       margin: 0 auto;
     }
 
-    /* هيدر زجاجي */
     .glass-header {
       background: rgba(10, 25, 20, 0.7);
       backdrop-filter: blur(10px);
@@ -48,7 +46,7 @@
     }
 
     .brand h1 {
-      font-size: 1.8rem; /* تم التكبير */
+      font-size: 1.8rem;
       font-weight: 800;
       background: linear-gradient(135deg, #C0FFD0, #6feb9e);
       background-clip: text;
@@ -58,7 +56,7 @@
     }
 
     .brand p {
-      font-size: 0.9rem; /* تم التكبير */
+      font-size: 0.9rem;
       color: #b9e6cd;
       margin-top: 2px;
       display: flex;
@@ -72,12 +70,11 @@
       border-radius: 2rem;
       padding: 0.3rem 1rem;
       backdrop-filter: blur(4px);
-      font-size: 0.9rem; /* تم التكبير */
+      font-size: 0.9rem;
       font-weight: 600;
       border-right: 2px solid #2ecc71;
     }
 
-    /* ========== بطاقات الإحصائيات ========== */
     .stats-row {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -111,7 +108,7 @@
     }
 
     .stat-label {
-      font-size: 1rem; /* تم التكبير */
+      font-size: 1rem;
       font-weight: 600;
       color: #c0f0d4;
       letter-spacing: 0.2px;
@@ -122,21 +119,20 @@
     }
 
     .stat-value {
-      font-size: 2.5rem; /* تم التكبير */
+      font-size: 2.5rem;
       font-weight: 800;
       color: #6ef0a3;
       line-height: 1.1;
     }
 
     .stat-icon {
-      font-size: 2.5rem; /* تم التكبير */
+      font-size: 2.5rem;
       opacity: 0.85;
     }
 
-    /* ========== شبكة البطاقات ========== */
     .achievements-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
       gap: 1.2rem;
       margin-top: 0.5rem;
     }
@@ -190,7 +186,7 @@
     }
 
     .emoji-badge {
-      font-size: 2.2rem; /* تم التكبير */
+      font-size: 2.2rem;
       display: inline-block;
       background: rgba(0, 0, 0, 0.4);
       border-radius: 1rem;
@@ -199,7 +195,7 @@
     }
 
     .card-title {
-      font-size: 1.3rem; /* تم التكبير بشكل كبير */
+      font-size: 1.2rem;
       font-weight: 700;
       color: #FFD966;
       line-height: 1.4;
@@ -208,32 +204,66 @@
     }
 
     .card-desc {
-      font-size: 1rem; /* تم التكبير */
+      font-size: 0.95rem;
       font-weight: 500;
       color: #c8e8d8;
       margin: 8px 0 12px;
-      line-height: 1.6; /* تحسين التباعد بين الأسطر */
+      line-height: 1.6;
       position: relative;
       z-index: 1;
     }
 
-    /* حجم العمل */
-    .hours-text {
-      background: rgba(46, 204, 113, 0.12);
+    .hours-table {
+      background: rgba(46, 204, 113, 0.08);
+      border-radius: 0.5rem;
+      padding: 0.5rem 0.8rem;
+      margin: 6px 0 10px;
+      border: 1px solid rgba(70, 200, 120, 0.15);
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.3rem;
+    }
+
+    .hours-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 0.8rem;
+      color: #98e8b8;
+    }
+
+    .hours-item .month {
+      font-weight: 600;
+      color: #b9e6cd;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+
+    .hours-item .value {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #6ef0a3;
+    }
+
+    .total-hours-badge {
+      background: rgba(46, 204, 113, 0.15);
       border-right: 2px solid #2ecc71;
-      padding: 0.4rem 0.7rem;
-      font-size: 0.9rem; /* تم التكبير */
-      font-weight: 500;
+      padding: 0.3rem 0.7rem;
+      font-size: 0.9rem;
+      font-weight: 600;
       color: #98e8b8;
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      margin-top: 6px;
+      margin-top: 4px;
       margin-bottom: 10px;
       width: fit-content;
+      position: relative;
+      z-index: 1;
     }
 
-    /* زر الرابط - بكامل عرض الكارت */
     .link-button {
       margin-top: 10px;
       position: relative;
@@ -251,10 +281,10 @@
       background: linear-gradient(135deg, rgba(46, 204, 113, 0.15), rgba(39, 174, 96, 0.25));
       border: 1px solid rgba(46, 204, 113, 0.5);
       border-radius: 2rem;
-      padding: 0.7rem 1.2rem; /* تم زيادة الحشو */
+      padding: 0.7rem 1.2rem;
       color: #6ef0a3;
-      font-weight: 700; /* زيادة الوزن */
-      font-size: 1rem; /* تم التكبير */
+      font-weight: 700;
+      font-size: 1rem;
       cursor: pointer;
       transition: all 0.2s ease;
       text-decoration: none;
@@ -287,7 +317,7 @@
       padding: 2rem;
       background: rgba(5, 20, 15, 0.8);
       border-radius: 1rem;
-      font-size: 1.1rem; /* تم التكبير */
+      font-size: 1.1rem;
       font-weight: 500;
       grid-column: 1 / -1;
     }
@@ -295,7 +325,7 @@
     footer {
       margin-top: 2rem;
       text-align: center;
-      font-size: 0.85rem; /* تم التكبير */
+      font-size: 0.85rem;
       font-weight: 500;
       opacity: 0.6;
     }
@@ -303,7 +333,7 @@
     @media (max-width: 640px) {
       body {
         padding: 0.6rem;
-        font-size: 16px; /* حجم مناسب للشاشات الصغيرة */
+        font-size: 16px;
       }
       .glass-header {
         padding: 0.8rem;
@@ -343,9 +373,9 @@
         padding: 0.6rem 1rem;
         font-size: 0.9rem;
       }
-      .hours-text {
-        font-size: 0.8rem;
-        padding: 0.3rem 0.6rem;
+      .hours-table {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
       }
       .team-badge {
         font-size: 0.8rem;
@@ -362,7 +392,7 @@
         <p>🏆 لوحة المنجزات | م. عبدالرحمن</p>
       </div>
       <div class="team-badge">
-        ⚡ إنجازات مايو 2026
+        ⚡ إنجازات مايو - أغسطس 2026
       </div>
     </div>
   </div>
@@ -392,53 +422,77 @@
   </div>
 
   <div id="achievementsGrid" class="achievements-grid"></div>
-  <footer>💎 شركة سكني للمقاولات | تصميم وتطوير م. عبدالرحمن</footer>
+  <footer>شركة سكني للمقاولات | م. عبدالرحمن</footer>
 </div>
 
 <script>
   // =============================================================
-  // البيانات - لكل إنجاز ايموجي واحد فقط
+  // البيانات - مع تفصيل الساعات لكل شهر
   // =============================================================
   let achievementsData = [
     {
       id: "ach1",
-      title: "تطبيق الإيجارات السحابي الجديد",
-      description: "بفضل الله تطبيق جديد سحابي بالكامل، ويعمل على كل الأجهزة، ويوفر إمكانيات متقدمة في متابعة الإيجارات والمستأجرين أولا بأول.",
-      hours: 35,
+      title: "تطوير تطبيق الإيجارات السحابي الجديد",
+      description: "الحمدلله تطبيق جديد سحابي بالكامل، يعمل على كل الأجهزة، ويوفر إمكانيات متقدمة في متابعة الإيجارات والمستأجرين أولا بأول، كان أغلب العمل عليه في مايو، وتمت إضافة قسم إحصائيات العمائر على حدة في يوليو.",
+      hoursMonths: { مايو: 35, يونيو: 0, يوليو: 10, أغسطس: 0 },
       link: "https://engr-abdulrahman.github.io/Eyjar_App/",
       emoji: "💻"
     },
     {
       id: "ach2",
-      title: "بروشور صرح قباء التجاري",
-      description: "إعداد عرض تقديمي تفاعلي مميز لمشروع صرح قباء.",
-      hours: 15,
-      link: "https://engr-abdulrahman.github.io/Works/",
-      emoji: "🏬"
-    },
-    {
-      id: "ach3",
-      title: "تطبيق ماليات فيلا 23",
-      description: "عرض تحويلات فيلا 23 البنكية بشكل تفاعلي، مع الربط بملفات pdf للتحويلات البنكية.",
-      hours: 7,
-      link: "https://engr-abdulrahman.github.io/Villa_23_Expenses/",
-      emoji: "💳"
-    },
-    {
-      id: "ach4",
       title: "التحديث المستمر للإيجارات",
       description: "الحمد لله البيانات يتم تحديثها بشكل مستمر، لضمان بيانات موثوقة يمكن الاعتماد عليها.",
-      hours: 25,
+      hoursMonths: { مايو: 25, يونيو: 15, يوليو: 10, أغسطس: 10 },
       link: null,
       emoji: "🔄"
     },
     {
+      id: "ach3",
+      title: "تصميم بروشور صرح قباء التجاري",
+      description: "إعداد عرض تقديمي تفاعلي لمشروع صرح قباء، بتقنية HTML و CSS، في شهر مايو.",
+      hoursMonths: { مايو: 15, يونيو: 0, يوليو: 0, أغسطس: 0 },
+      link: "https://engr-abdulrahman.github.io/Works/",
+      emoji: "🏬"
+    },
+    {
+      id: "ach4",
+      title: "تصميم تطبيق ماليات فيلا 23",
+      description: "عرض تحويلات فيلا 23 البنكية بشكل تفاعلي، مع الربط بملفات pdf للتحويلات البنكية (مايو)، ثم بعض التحسينات البرمجية عليه في يوليو.",
+      hoursMonths: { مايو: 7, يونيو: 0, يوليو: 4, أغسطس: 0 },
+      link: "https://engr-abdulrahman.github.io/Villa_23_Expenses/",
+      emoji: "💳"
+    },
+    {
       id: "ach5",
+      title: "تحديث تحويلات فيلا23",
+      description: "رفع ملفات التحويلات البنكية لمشروع فيلا23 على صفحة التطبيق الخاصة به بشكل دوري، مع تحديث بياناتها من محادثة (حسابات فيلا23)، خلال شهري يوليو وأغسطس.",
+      hoursMonths: { مايو: 0, يونيو: 0, يوليو: 7, أغسطس: 7 },
+      link: null,
+      emoji: "♻️"
+    },
+    {
+      id: "ach6",
       title: "مساعدات إدارية ومكتبية",
-      description: "مثل تجهيز بيانات ناجز والمياه، وجمع بيانات المكاتب الهندسية من موقع الأمانة.",
-      hours: 5,
+      description: "مثل تجهيز بيانات ناجز والمياه، وجمع بيانات المكاتب الهندسية من موقع الأمانة. وكذلك بعض التصميمات مثل (ورقة عدم رمي المناديل)، وخطاب الباص وتعهدات الكاتلات، وصورة ستوري للفندق، وغيرها، خلال الأشهر من مايو لـ أغسطس.",
+      hoursMonths: { مايو: 5, يونيو: 0, يوليو: 5, أغسطس: 7 },
       link: null,
       emoji: "📋"
+    },
+    {
+      id: "ach7",
+      title: "تصميم لوحة سياسات الفندق",
+      description: "تصميم صفحة PDF لسياسات الفندق، 27 يوليو.",
+      hoursMonths: { مايو: 0, يونيو: 0, يوليو: 3, أغسطس: 0 },
+      link: null,
+      emoji: "📜"
+    },
+    {
+      id: "ach8",
+      title: "العمل على بوكينج",
+      description: "الرد على الأسئلة المتراكمة على حساب الفندق على بوكينج، وعددها 168 سؤال، كان ذلك خلال شهري يوليو وأغسطس.",
+      hoursMonths: { مايو: 0, يونيو: 0, يوليو: 10, أغسطس: 5 },
+      link: null,
+      emoji: "✋🏻"
     }
   ];
 
@@ -451,7 +505,11 @@
     let linksWithUrl = 0;
     
     achievementsData.forEach(ach => {
-      totalHours += (ach.hours || 0);
+      // حساب إجمالي الساعات من مجموع الأشهر
+      const monthHours = Object.values(ach.hoursMonths);
+      const totalAchHours = monthHours.reduce((sum, h) => sum + h, 0);
+      totalHours += totalAchHours;
+      
       if (ach.link && ach.link.trim() !== "") {
         linksWithUrl++;
       }
@@ -478,6 +536,23 @@
       const buttonDisabled = !hasLink ? 'disabled' : '';
       const buttonClass = !hasLink ? 'btn-open-link disabled' : 'btn-open-link';
       
+      // حساب إجمالي ساعات هذا الإنجاز
+      const monthHours = Object.values(ach.hoursMonths);
+      const totalAchHours = monthHours.reduce((sum, h) => sum + h, 0);
+      
+      // بناء جدول الساعات
+      const months = ['مايو', 'يونيو', 'يوليو', 'أغسطس'];
+      let hoursHtml = '';
+      months.forEach(month => {
+        const value = ach.hoursMonths[month] || 0;
+        hoursHtml += `
+          <div class="hours-item">
+            <span class="month">${month}</span>
+            <span class="value">${value}</span>
+          </div>
+        `;
+      });
+      
       cardsHtml += `
         <div class="achievement-card">
           <div class="card-header">
@@ -485,8 +560,11 @@
             <div class="card-title">${escapeHtml(ach.title)}</div>
           </div>
           <div class="card-desc">${escapeHtml(ach.description)}</div>
-          <div class="hours-text">
-            📦 حجم العمل: ${escapeHtml(ach.hours.toString())} ساعة
+          <div class="hours-table">
+            ${hoursHtml}
+          </div>
+          <div class="total-hours-badge">
+            📦 إجمالي الساعات: ${totalAchHours} ساعة
           </div>
           <div class="link-button">
             <button class="${buttonClass}" 
