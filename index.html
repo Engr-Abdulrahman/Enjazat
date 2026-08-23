@@ -15,7 +15,7 @@
     }
 
     body {
-      background: radial-gradient(circle at 10% 20%, #0a1a14, #030a07);
+      background: radial-gradient(circle at 10% 20%, #050f0b, #010302);
       min-height: 100vh;
       padding: 1rem;
       color: #eef5f0;
@@ -28,13 +28,13 @@
     }
 
     .glass-header {
-      background: rgba(10, 25, 20, 0.7);
+      background: rgba(5, 15, 10, 0.85);
       backdrop-filter: blur(10px);
       border-radius: 1rem;
       padding: 0.8rem 1.2rem;
       margin-bottom: 1.5rem;
-      border: 1px solid rgba(80, 200, 120, 0.3);
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(80, 200, 120, 0.25);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
     }
 
     .header-content {
@@ -66,7 +66,7 @@
     }
 
     .team-badge {
-      background: rgba(20, 50, 40, 0.8);
+      background: rgba(10, 30, 20, 0.9);
       border-radius: 2rem;
       padding: 0.3rem 1rem;
       backdrop-filter: blur(4px);
@@ -83,13 +83,13 @@
     }
 
     .stat-card {
-      background: rgba(8, 25, 20, 0.85);
+      background: rgba(3, 12, 8, 0.92);
       backdrop-filter: blur(8px);
       border-radius: 0.6rem;
       padding: 1rem 1.2rem;
-      border: 1px solid rgba(70, 210, 130, 0.3);
+      border: 1px solid rgba(70, 210, 130, 0.25);
       transition: transform 0.2s ease, background 0.2s;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -97,8 +97,8 @@
 
     .stat-card:hover {
       transform: translateY(-3px);
-      background: rgba(20, 55, 45, 0.9);
-      border-color: rgba(80, 220, 130, 0.7);
+      background: rgba(10, 35, 25, 0.95);
+      border-color: rgba(80, 220, 130, 0.6);
     }
 
     .stat-info {
@@ -138,13 +138,13 @@
     }
 
     .achievement-card {
-      background: rgba(5, 20, 15, 0.9);
+      background: rgba(2, 10, 6, 0.95);
       backdrop-filter: blur(8px);
       border-radius: 0.6rem;
       padding: 1rem;
       transition: all 0.25s ease;
-      border: 2px solid rgba(70, 200, 120, 0.3);
-      box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.5);
+      border: 2px solid rgba(70, 200, 120, 0.2);
+      box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.7);
       display: flex;
       flex-direction: column;
       position: relative;
@@ -159,20 +159,20 @@
       right: 0;
       height: 100%;
       width: 100%;
-      background: radial-gradient(circle at 30% 10%, rgba(80, 220, 130, 0.05), transparent 70%);
+      background: radial-gradient(circle at 30% 10%, rgba(80, 220, 130, 0.03), transparent 70%);
       pointer-events: none;
       z-index: 0;
     }
 
     .achievement-card:hover::before {
-      background: radial-gradient(circle at 40% 20%, rgba(100, 240, 150, 0.08), transparent 80%);
+      background: radial-gradient(circle at 40% 20%, rgba(100, 240, 150, 0.05), transparent 80%);
     }
 
     .achievement-card:hover {
       transform: translateY(-3px);
-      background: rgba(8, 30, 22, 0.95);
-      border-color: #3edb7a;
-      box-shadow: 0 10px 18px -8px rgba(0, 0, 0, 0.6);
+      background: rgba(4, 18, 12, 0.98);
+      border-color: #2ecc71;
+      box-shadow: 0 10px 18px -8px rgba(0, 0, 0, 0.8);
     }
 
     .card-header {
@@ -188,7 +188,7 @@
     .emoji-badge {
       font-size: 2.2rem;
       display: inline-block;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.5);
       border-radius: 1rem;
       padding: 0.1rem 0.5rem;
       line-height: 1;
@@ -208,17 +208,18 @@
       font-weight: 500;
       color: #c8e8d8;
       margin: 8px 0 12px;
-      line-height: 1.6;
+      line-height: 1.8;
+      text-align: justify;
       position: relative;
       z-index: 1;
     }
 
     .hours-table {
-      background: rgba(46, 204, 113, 0.08);
+      background: rgba(46, 204, 113, 0.06);
       border-radius: 0.5rem;
       padding: 0.5rem 0.8rem;
       margin: 6px 0 10px;
-      border: 1px solid rgba(70, 200, 120, 0.15);
+      border: 1px solid rgba(70, 200, 120, 0.1);
       position: relative;
       z-index: 1;
       display: grid;
@@ -239,6 +240,7 @@
       color: #b9e6cd;
       font-size: 0.7rem;
       text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     .hours-item .value {
@@ -247,8 +249,13 @@
       color: #6ef0a3;
     }
 
+    .hours-item .value.zero {
+      color: #4a6b5a;
+      font-weight: 400;
+    }
+
     .total-hours-badge {
-      background: rgba(46, 204, 113, 0.15);
+      background: rgba(46, 204, 113, 0.12);
       border-right: 2px solid #2ecc71;
       padding: 0.3rem 0.7rem;
       font-size: 0.9rem;
@@ -278,8 +285,8 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      background: linear-gradient(135deg, rgba(46, 204, 113, 0.15), rgba(39, 174, 96, 0.25));
-      border: 1px solid rgba(46, 204, 113, 0.5);
+      background: linear-gradient(135deg, rgba(46, 204, 113, 0.12), rgba(39, 174, 96, 0.2));
+      border: 1px solid rgba(46, 204, 113, 0.4);
       border-radius: 2rem;
       padding: 0.7rem 1.2rem;
       color: #6ef0a3;
@@ -293,29 +300,29 @@
     }
 
     .btn-open-link:hover {
-      background: linear-gradient(135deg, rgba(46, 204, 113, 0.25), rgba(39, 174, 96, 0.4));
+      background: linear-gradient(135deg, rgba(46, 204, 113, 0.2), rgba(39, 174, 96, 0.35));
       border-color: #2ecc71;
       color: #ffffff;
       transform: translateY(-2px);
     }
 
     .btn-open-link.disabled {
-      opacity: 0.5;
+      opacity: 0.4;
       cursor: not-allowed;
-      background: rgba(100, 100, 100, 0.15);
-      border-color: rgba(100, 100, 100, 0.3);
+      background: rgba(60, 60, 60, 0.15);
+      border-color: rgba(80, 80, 80, 0.3);
     }
 
     .btn-open-link.disabled:hover {
       transform: none;
-      background: rgba(100, 100, 100, 0.15);
+      background: rgba(60, 60, 60, 0.15);
       color: #6ef0a3;
     }
 
     .empty-state {
       text-align: center;
       padding: 2rem;
-      background: rgba(5, 20, 15, 0.8);
+      background: rgba(2, 10, 6, 0.9);
       border-radius: 1rem;
       font-size: 1.1rem;
       font-weight: 500;
@@ -327,7 +334,7 @@
       text-align: center;
       font-size: 0.85rem;
       font-weight: 500;
-      opacity: 0.6;
+      opacity: 0.5;
     }
 
     @media (max-width: 640px) {
@@ -361,6 +368,7 @@
       }
       .card-desc {
         font-size: 0.9rem;
+        line-height: 1.7;
       }
       .emoji-badge {
         font-size: 1.8rem;
@@ -422,7 +430,7 @@
   </div>
 
   <div id="achievementsGrid" class="achievements-grid"></div>
-  <footer>شركة سكني للمقاولات | م. عبدالرحمن</footer>
+  <footer>💎 شركة سكني للمقاولات | تصميم وتطوير م. عبدالرحمن</footer>
 </div>
 
 <script>
@@ -434,7 +442,7 @@
       id: "ach1",
       title: "تطوير تطبيق الإيجارات السحابي الجديد",
       description: "الحمدلله تطبيق جديد سحابي بالكامل، يعمل على كل الأجهزة، ويوفر إمكانيات متقدمة في متابعة الإيجارات والمستأجرين أولا بأول، كان أغلب العمل عليه في مايو، وتمت إضافة قسم إحصائيات العمائر على حدة في يوليو.",
-      hoursMonths: { مايو: 35, يونيو: 0, يوليو: 10, أغسطس: 0 },
+      hoursMonths: { May: 35, Jun: 0, Jul: 10, Aug: 0 },
       link: "https://engr-abdulrahman.github.io/Eyjar_App/",
       emoji: "💻"
     },
@@ -442,7 +450,7 @@
       id: "ach2",
       title: "التحديث المستمر للإيجارات",
       description: "الحمد لله البيانات يتم تحديثها بشكل مستمر، لضمان بيانات موثوقة يمكن الاعتماد عليها.",
-      hoursMonths: { مايو: 25, يونيو: 15, يوليو: 10, أغسطس: 10 },
+      hoursMonths: { May: 25, Jun: 15, Jul: 10, Aug: 10 },
       link: null,
       emoji: "🔄"
     },
@@ -450,7 +458,7 @@
       id: "ach3",
       title: "تصميم بروشور صرح قباء التجاري",
       description: "إعداد عرض تقديمي تفاعلي لمشروع صرح قباء، بتقنية HTML و CSS، في شهر مايو.",
-      hoursMonths: { مايو: 15, يونيو: 0, يوليو: 0, أغسطس: 0 },
+      hoursMonths: { May: 15, Jun: 0, Jul: 0, Aug: 0 },
       link: "https://engr-abdulrahman.github.io/Works/",
       emoji: "🏬"
     },
@@ -458,7 +466,7 @@
       id: "ach4",
       title: "تصميم تطبيق ماليات فيلا 23",
       description: "عرض تحويلات فيلا 23 البنكية بشكل تفاعلي، مع الربط بملفات pdf للتحويلات البنكية (مايو)، ثم بعض التحسينات البرمجية عليه في يوليو.",
-      hoursMonths: { مايو: 7, يونيو: 0, يوليو: 4, أغسطس: 0 },
+      hoursMonths: { May: 7, Jun: 0, Jul: 4, Aug: 0 },
       link: "https://engr-abdulrahman.github.io/Villa_23_Expenses/",
       emoji: "💳"
     },
@@ -466,7 +474,7 @@
       id: "ach5",
       title: "تحديث تحويلات فيلا23",
       description: "رفع ملفات التحويلات البنكية لمشروع فيلا23 على صفحة التطبيق الخاصة به بشكل دوري، مع تحديث بياناتها من محادثة (حسابات فيلا23)، خلال شهري يوليو وأغسطس.",
-      hoursMonths: { مايو: 0, يونيو: 0, يوليو: 7, أغسطس: 7 },
+      hoursMonths: { May: 0, Jun: 0, Jul: 7, Aug: 7 },
       link: null,
       emoji: "♻️"
     },
@@ -474,7 +482,7 @@
       id: "ach6",
       title: "مساعدات إدارية ومكتبية",
       description: "مثل تجهيز بيانات ناجز والمياه، وجمع بيانات المكاتب الهندسية من موقع الأمانة. وكذلك بعض التصميمات مثل (ورقة عدم رمي المناديل)، وخطاب الباص وتعهدات الكاتلات، وصورة ستوري للفندق، وغيرها، خلال الأشهر من مايو لـ أغسطس.",
-      hoursMonths: { مايو: 5, يونيو: 0, يوليو: 5, أغسطس: 7 },
+      hoursMonths: { May: 5, Jun: 0, Jul: 5, Aug: 7 },
       link: null,
       emoji: "📋"
     },
@@ -482,7 +490,7 @@
       id: "ach7",
       title: "تصميم لوحة سياسات الفندق",
       description: "تصميم صفحة PDF لسياسات الفندق، 27 يوليو.",
-      hoursMonths: { مايو: 0, يونيو: 0, يوليو: 3, أغسطس: 0 },
+      hoursMonths: { May: 0, Jun: 0, Jul: 3, Aug: 0 },
       link: null,
       emoji: "📜"
     },
@@ -490,7 +498,7 @@
       id: "ach8",
       title: "العمل على بوكينج",
       description: "الرد على الأسئلة المتراكمة على حساب الفندق على بوكينج، وعددها 168 سؤال، كان ذلك خلال شهري يوليو وأغسطس.",
-      hoursMonths: { مايو: 0, يونيو: 0, يوليو: 10, أغسطس: 5 },
+      hoursMonths: { May: 0, Jun: 0, Jul: 10, Aug: 5 },
       link: null,
       emoji: "✋🏻"
     }
@@ -540,15 +548,17 @@
       const monthHours = Object.values(ach.hoursMonths);
       const totalAchHours = monthHours.reduce((sum, h) => sum + h, 0);
       
-      // بناء جدول الساعات
-      const months = ['مايو', 'يونيو', 'يوليو', 'أغسطس'];
+      // بناء جدول الساعات بالأسماء الإنجليزية
+      const months = ['May', 'Jun', 'Jul', 'Aug'];
       let hoursHtml = '';
       months.forEach(month => {
         const value = ach.hoursMonths[month] || 0;
+        const displayValue = value === 0 ? '-' : value;
+        const zeroClass = value === 0 ? 'zero' : '';
         hoursHtml += `
           <div class="hours-item">
             <span class="month">${month}</span>
-            <span class="value">${value}</span>
+            <span class="value ${zeroClass}">${displayValue}</span>
           </div>
         `;
       });
